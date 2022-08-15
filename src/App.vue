@@ -19,7 +19,6 @@
     <q-page-container class="q-mt-xl">
       <router-view/>
     </q-page-container>
-    
 
     <q-footer class="bg-light-blue-2 text-white">
       <q-toolbar>
@@ -51,7 +50,7 @@
 import { mapGetters, mapActions } from 'vuex'
 export default{
   computed: {
-    ...mapGetters(['myContacts'])
+    ...mapGetters(['myContacts', 'isTasks', 'load'])
   },
   methods: {
     ...mapActions(['getTasks']),

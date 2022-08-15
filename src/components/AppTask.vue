@@ -12,6 +12,11 @@
             <QuasarCard :text="item.text" :title="item.title" :id="item.id" :isDone="item.isDone" v-if="item.isDone"/>
          </template>
       </div>
+
+      <div class="q-pa-md row q-gutter-md justify-center">
+         <q-spinner color="primary" size="3em" v-if="loadTasks"/>
+         <p v-if="!isTasks && !loadTasks">Tasks list is empty</p>
+      </div>
    </div>  
 </template>
 
@@ -20,7 +25,7 @@ import QuasarCard from '@/components/QuasarCard.vue'
 import { mapGetters } from 'vuex'
 export default {
    computed:{
-      ...mapGetters(['tasks']),
+      ...mapGetters(['tasks', 'isTasks', 'loadTasks']),
    },
    components: {
       QuasarCard

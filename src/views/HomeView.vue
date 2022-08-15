@@ -1,7 +1,7 @@
 <template>
-  <div class="home flex flex-center column" :style="$store.getters.tasks.length ? '' : 'height: 80vh'">
+  <div class="home flex flex-center column" >
     <AppInput class="flex row flex-center"/>
-    <AppTask class="flex row flex-center" />
+    <AppTask class="flex row flex-center"/>
   </div>
 </template>
 
@@ -14,6 +14,6 @@ export default {
   components: {
     AppInput,
     AppTask,
-  },
+  }
 }
 </script>

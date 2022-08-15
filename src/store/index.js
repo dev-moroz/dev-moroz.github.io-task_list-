@@ -37,14 +37,18 @@ const store = {
     myContacts: {
       git: "https://github.com/dev-moroz",
       tg: "https://t.me/dev_moroz",
-      resumeNotion: "https://brindle-debt-0dd.notion.site/97925d98fd9e4f81a4ce5aaad84f2fa9",
+      resumeNotion:
+        "https://brindle-debt-0dd.notion.site/97925d98fd9e4f81a4ce5aaad84f2fa9",
     },
+    loadTasks: true,
   },
 
   getters: {
     tasks: state => state.tasks,
+    isTasks: state => state.tasks.length > 0,
     myContacts: state => state.myContacts,
     cleanTask: state => state.cleanTask,
+    loadTasks: state => state.loadTasks,
   },
 
   mutations: {
@@ -92,6 +96,10 @@ const store = {
         id: null,
       }
     },
+
+    changeLoad(state) {
+      state.loadTasks = false
+    },
   },
 
   actions: {
@@ -104,6 +112,7 @@ const store = {
             const array = Object.keys(obj).map(key => obj[key])
             commit("setTasks", array)
           }
+          commit("changeLoad")
         })
         .catch(error => {
           console.error(error)
