@@ -11,12 +11,12 @@
 
       <q-tabs indicator-color="transparent" active-color="white" class="text-light-blue-2">
         <q-route-tab to="/" label="My Tasks" />
-        <!-- <q-route-tab  to="/about" label="About app" /> -->
+        <q-route-tab  to="/about" label="About app" />
       </q-tabs>
 
     </q-header>
 
-    <q-page-container>
+    <q-page-container style="height:100vh; position: fixed;width: 100%;">
       <router-view/>
     </q-page-container>
     
