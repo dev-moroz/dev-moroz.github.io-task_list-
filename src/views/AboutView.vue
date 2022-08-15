@@ -1,6 +1,6 @@
 <template>
   <div class="about flex flex-center column item-center">
-      <q-card-section class="descriptoin">
+      <q-card-section class="descriptoin q-ma-sm">
       <h4>About this app</h4>
       <h3></h3>
       <p>
@@ -33,6 +33,6 @@
   p{
     font-size: 1.2em;
   }
-  
+
 }
 </style>

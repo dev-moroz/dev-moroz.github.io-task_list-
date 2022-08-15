@@ -16,7 +16,7 @@
 
     </q-header>
 
-    <q-page-container style="height:100vh; position: fixed;width: 100%;">
+    <q-page-container class="q-mt-xl">
       <router-view/>
     </q-page-container>
     
@@ -61,11 +61,3 @@ export default{
   }
 }
 </script>
-
-<style lang="scss" scoped>
-#title{
-  @media (max-width: $breakpoint-xs-max){    
-    display: none;
-  }
-}
-</style>
