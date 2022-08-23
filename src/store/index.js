@@ -68,13 +68,13 @@ const store = {
     changeTaskInfo(state, id) {
       const task = state.tasks.find(item => item.id === id)
 
-      state.cleanTask.text += task.title + "\n"
+      state.cleanTask.text += task.title
       state.cleanTask.id = id
 
       let text = task.text
       for (let key in text) {
         if (task.title != text[0]) {
-          state.cleanTask.text += text[key] + "\n"
+          state.cleanTask.text += "\n" + text[key]
         }
       }
     },
