@@ -1,4 +1,4 @@
-# Todo tasks - test project 
+# Todo tasks
 
 <a href="https://dev-moroz.github.io/task_list/  " target="_blank">
   <img src="https://img.shields.io/badge/Watch%20project-red?style=for-the-badge&logoColor=white" alt="Project"/>
